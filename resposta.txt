@@ -1,4 +1,4 @@
-Colocar um contianer pra rodar na porta 3000 para dar conflito de porta
+Colocar um container pra rodar na porta 3000 para dar conflito de porta
 Excluido o express do package.json
 1 - alterado arquivo server.js para inicio.js
 2 - no arquivo server.js alterada o nome da variavel de ambiente de PORT para PORTA
