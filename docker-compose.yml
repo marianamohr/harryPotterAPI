@@ -3,7 +3,7 @@ version: "3"
 services:
   node:
     image: node:16
-    container_name: bug-hunting
+    container_name: bug-hunting-harry-potter
     tty: true
     stdin_open: true
     command: bash
