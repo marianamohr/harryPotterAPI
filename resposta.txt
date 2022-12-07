@@ -1,0 +1,8 @@
+Colocar um contianer pra rodar na porta 3000 para dar conflito de porta
+Excluido o express do package.json
+1 - alterado arquivo server.js para inicio.js
+2 - no arquivo server.js alterada o nome da variavel de ambiente de PORT para PORTA
+3 - Retirado app.use('/characters', harryPotterRouter); do app.js
+4 - retirado do / da rota de Pput do arquivo harryPotter.js linha 26
+5 - Retirado Number(id) da linha 29 do arquivo harryPotter.js
+6 - Retirado parenteses da linha 4 do arquivo harryPotter.js
