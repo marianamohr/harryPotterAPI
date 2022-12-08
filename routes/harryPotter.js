@@ -1,14 +1,16 @@
 const express = require("express");
-const personagens = require("../data/personagens");
+let personagens = require("../data/personagens");
 
 const router = express();
 
 router.get("/", async (req, res) => {
+  console.log(personagens)
   res.status(200).json(personagens);
 });
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
+  console.log(id)
   const filtred = personagens.filter((item) => item.id === Number(id));
   if (!filtred) {
     return res.status(404).json({ message: "Personagem não encontrado" });
@@ -35,8 +37,8 @@ router.put("/:id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  const personagensFIltred = data.filter((item) => item.id !== Number(id));
-  await saveFile(newTalkers);
+  const personagensFIltred = personagens.filter((item) => item.id !== Number(id));
+  personagens = personagensFIltred;
   return res.status(204).send();
 });
 
