@@ -3,7 +3,7 @@ version: "3"
 services:
   node:
     image: node:16
-    container_name: bug-hunting-harry-potter
+    container_name: harry-potter
     tty: true
     stdin_open: true
     command: bash
@@ -15,7 +15,19 @@ services:
       - 3000:3000
     environment:
       - PORT=3000
+      
+  database:
+    image: mysql:5.7
+    container_name: mysql_harry_potter
+    platform: linux/x86_64
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+    volumes:
+      - ./data/seeder:/docker-entrypoint-initdb.d
+
 
 networks:
   default:
-    name: bug_hunting_net
+    name: harry-potter_net
